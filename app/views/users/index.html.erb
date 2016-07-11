@@ -1,1 +1,16 @@
 <h1> index</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td><%= u.username %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
