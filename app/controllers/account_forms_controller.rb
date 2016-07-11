@@ -1,8 +1,4 @@
-class UsersController < ApplicationController
-  def index
-    @users = User.all
-  end
-
+class AccountFormsController < ApplicationController
   def new
     @account = AccountForm.new
   end
