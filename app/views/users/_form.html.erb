@@ -1,31 +1,8 @@
-<h1> creating/updating a user </h1>
+<h1> creating/updating a user</h1>
 
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this subject from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
-  <div class="field">
-    <%= f.text_field :user_id, value: username %>
-    <%= f.label :title %><br>
-    <%= f.phone_field :value %>
-
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= form_for @account do |f| %>
+    <p>Username: <%= f.text_field :username %> </p>
+    <p>Phone Type: <%= f.text_field :phone_type %></p>
+    <p>Phone #: <%= f.text_field :phone_number %></p>
+  <%= f.submit %>
 <% end %>

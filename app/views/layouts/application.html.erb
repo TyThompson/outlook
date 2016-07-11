@@ -10,5 +10,12 @@
 
 <%= yield %>
 
+<footer>
+  <% if Rails.env.development? %>
+    <p><%= params[:controller] %>#<%= params[:action] %></p>
+        <p>Time: <%= Time.now %></p>
+  <% end %>
+</footer>
+
 </body>
 </html>
