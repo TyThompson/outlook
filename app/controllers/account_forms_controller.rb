@@ -21,6 +21,6 @@ class AccountFormsController < ApplicationController
 private
 
   def account_params
-    params.require(:account_form).permit(:username, :phone_type, :phone_number)
+    params.require(:account_form).permit(:username, phone_type: [], phone_number: [])
   end
 end

@@ -2,7 +2,17 @@
 
   <%= form_for @account do |f| %>
     <p>Username: <%= f.text_field :username %> </p>
-    <p>Phone Type: <%= f.text_field :phone_type %></p>
-    <p>Phone #: <%= f.text_field :phone_number %></p>
+    <p>Phone Type:
+    <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p>
+    <p>Phone #:
+    <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p>
+    <p>Phone Type:
+    <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p>
+    <p>Phone #:
+    <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p>
+    <p>Phone Type:
+    <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p>
+    <p>Phone #:
+    <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p>
   <%= f.submit %>
 <% end %>

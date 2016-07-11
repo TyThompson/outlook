@@ -8,10 +8,11 @@ class AccountForm
         user = User.where(
           username:  username
         ).first_or_create!
-        Phone.where(
+        phone = Phone.where(
           user_id: user.id,
           phone_type: phone_type,
           phone_number: phone_number
         ).first_or_create!
+
       end
   end
