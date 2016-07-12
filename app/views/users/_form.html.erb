@@ -2,17 +2,32 @@
 
   <%= form_for @account do |f| %>
     <p>Username: <%= f.text_field :username %> </p>
-    <p>Phone Type:
-    <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p>
-    <p>Phone #:
-    <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p>
-    <p>Phone Type:
-    <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p>
-    <p>Phone #:
-    <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p>
-    <p>Phone Type:
-    <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p>
-    <p>Phone #:
-    <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p>
+    <div class="phone_input">
+      <span class="phone_type"><p>Phone Type:
+      <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p></span>
+      <span class="phone_number"><p>Phone #:
+      <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p></span>
+    </div>
+    <p>
+    </p>
+    <div class="phone_input">
+      <span class="phone_type"><p>Phone Type:
+      <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p></span>
+      <span class="phone_number"><p>Phone #:
+      <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p></span>
+    </div>
+    <p>
+    </p>
+    <div class="input_fields_wrap">
+      <div class="phone_input">
+        <span class="phone_type"><p>Phone Type:
+        <%= f.text_field :phone_type, label: "(Cell, Home, etc.)", name: "account_form[phone_type][]"%></p></span>
+        <span class="phone_number"><p>Phone #:
+        <%= f.text_field :phone_number, label: "Phone #", name: "account_form[phone_number][]"%></p></span>
+      </div>
+      <p>
+      </p>
+    </div>
   <%= f.submit %>
 <% end %>
+<button class="add_field_button">Add More Fields</button>
