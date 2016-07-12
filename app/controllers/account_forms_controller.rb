@@ -7,6 +7,7 @@ class AccountFormsController < ApplicationController
   end
 
   def show
+    @phones = Phone.where(user_id: @user.id)
   end
 
   def create
@@ -22,5 +23,9 @@ private
 
   def account_params
     params.require(:account_form).permit(:username, phone_type: [], phone_number: [])
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end
